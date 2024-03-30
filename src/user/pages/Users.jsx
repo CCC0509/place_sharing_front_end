@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 
 import UserList from "../components/UsersLIst";
 import ErrorModal from "../../shared/components/UIElement/ErrorModal";
