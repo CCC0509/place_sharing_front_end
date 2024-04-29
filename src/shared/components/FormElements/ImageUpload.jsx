@@ -64,11 +64,11 @@ const ImageUpload = (props) => {
       <div className={`image-upload ${props.center && "center"}`}>
         <div className="image-upload__preview">
           {previewUrl && <img src={previewUrl} alt="Preview" />}
-          {!previewUrl && <p>Please pick an image.</p>}
+          {!previewUrl && <p>請選擇圖片</p>}
         </div>
 
         <Button type="button" onClick={pickImageHandler}>
-          PICK IMAGE
+          選擇圖片
         </Button>
       </div>
       {!isValid && inputState.isTouched && (

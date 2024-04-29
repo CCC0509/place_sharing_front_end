@@ -17,23 +17,23 @@ const NavLinks = (props) => {
     <ul className="nav-links">
       <li>
         <NavLink to="/" exact="true">
-          ALL USERS
+          首頁
         </NavLink>
       </li>
       {auth.isLoggedIn && (
         <li>
-          <NavLink to={`/${auth.userId}/places`}>MY PLACES</NavLink>
+          <NavLink to={`/${auth.userId}/places`}>我的地點</NavLink>
         </li>
       )}
       {auth.isLoggedIn && (
         <li>
-          <NavLink to="/places/new">ADD PLACE</NavLink>
+          <NavLink to="/places/new">分享地點</NavLink>
         </li>
       )}
 
       <li>
         <NavLink to="/auth" onClick={logoutHandler}>
-          {auth.isLoggedIn ? "LOGOUT" : "AUTHENTICATE"}
+          {auth.isLoggedIn ? "登出" : "登入"}
         </NavLink>
       </li>
     </ul>

@@ -15,7 +15,9 @@ const MainNavigation = (props) => {
 
   return (
     <>
-      {drawerIsOpen && <Backdrop onClick={closeDrawerHandler} />}
+      {drawerIsOpen && drawerIsOpen && (
+        <Backdrop onClick={closeDrawerHandler} />
+      )}
 
       <SideDrawer show={drawerIsOpen} onClick={closeDrawerHandler}>
         <nav>
@@ -33,7 +35,7 @@ const MainNavigation = (props) => {
           <span />
         </button>
         <h1 className="main-navigation__title">
-          <Link to="/">YourPlaces</Link>
+          <Link to="/">想享</Link>
         </h1>
         <nav className="main-navigation__header-nav">
           <NavLinks />

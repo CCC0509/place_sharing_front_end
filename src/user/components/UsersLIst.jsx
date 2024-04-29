@@ -9,7 +9,7 @@ const UserList = (props) => {
     return (
       <div className="center">
         <Card>
-          <h2>No users found.</h2>
+          <h2>還沒有使用者，快去創建一個！</h2>
         </Card>
       </div>
     );

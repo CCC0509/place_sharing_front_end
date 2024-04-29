@@ -16,7 +16,7 @@ const UserItem = (props) => {
             <h2>{props.name}</h2>
             <h3>
               {props.placeCount}
-              {props.placeCount <= 1 ? " Place" : " Places"}
+              個分享
             </h3>
           </div>
         </Link>

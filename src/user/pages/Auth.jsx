@@ -88,7 +88,7 @@ const Auth = () => {
       <ErrorModal error={error} onClear={errorHandler} />
       <Card className="authentication">
         {isLoading && <LoadingSpinner asOverlay />}
-        <h2>Login Required</h2>
+        <h2>登入</h2>
         <hr />
         <form onSubmit={loginHandler}>
           {!isLoginMode && (
@@ -96,7 +96,7 @@ const Auth = () => {
               id="name"
               element="input"
               type="text"
-              label="Your Name"
+              label="你的暱稱"
               validators={[VALIDATOR_REQUIRE()]}
               errorText="Please enter a name."
               onInput={inputHandler}
@@ -129,11 +129,11 @@ const Auth = () => {
             onInput={inputHandler}
           />
           <Button type="submit" disabled={!formState.isValid}>
-            {isLoginMode ? "LOGIN" : "SIGNUP"}
+            {isLoginMode ? "登入" : "註冊"}
           </Button>
         </form>
         <Button onClick={switchModeHandler}>
-          {isLoginMode ? "SWITCH TO SIGNUP" : "SWITCH TO LOGIN"}
+          {isLoginMode ? "切換到註冊" : "切換到登入"}
         </Button>
       </Card>
     </>

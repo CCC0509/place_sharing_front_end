@@ -72,36 +72,36 @@ const NewPlace = () => {
             id="title"
             element="input"
             type="text"
-            label="Title"
+            label="主題"
             validators={[VALIDATOR_REQUIRE()]}
-            errorText="Please enter a valid title."
+            errorText="請輸入有效主題"
             onInput={inputHandler}
           />
           <ImageUpload
             center
             id="image"
             onInput={inputHandler}
-            errorText="Please provide an image."
+            errorText="請選擇有效圖片"
           />
           <Input
             id="description"
             element="textarea"
-            label="Description"
+            label="內容"
             validators={[VALIDATOR_MINLENGTH(5)]}
-            errorText="Please enter a valid description (at least 5 characters)."
+            errorText="請輸入有效內容 (至少5個文字)"
             onInput={inputHandler}
           />
           <Input
             id="address"
             element="input"
             type="text"
-            label="Address"
+            label="地點"
             validators={[VALIDATOR_REQUIRE()]}
-            errorText="Please enter a valid address."
+            errorText="請輸入有效地址"
             onInput={inputHandler}
           />
           <Button type="submit" disabled={!formState.isValid}>
-            ADD PLACE
+            新增地點
           </Button>
         </form>
       )}

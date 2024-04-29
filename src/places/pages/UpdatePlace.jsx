@@ -94,9 +94,9 @@ const UpdatePlace = () => {
             id="title"
             element="input"
             type="text"
-            label="Title"
+            label="主題"
             validators={[VALIDATOR_REQUIRE()]}
-            errorText="Please enter a valid title."
+            errorText="請輸入有效主題"
             onInput={inputHandler}
             value={getPlace.title}
             valid={true}
@@ -104,15 +104,15 @@ const UpdatePlace = () => {
           <Input
             id="description"
             element="textarea"
-            label="Description"
+            label="內同"
             validators={[VALIDATOR_MINLENGTH(5)]}
-            errorText="Please enter a valid description (at least 5 characters)."
+            errorText="請輸入有效內容 (至少5個文字)"
             onInput={inputHandler}
             value={getPlace.description}
             valid={true}
           />
           <Button type="submit" disabled={!formState.isValid}>
-            UPDATE PLACE
+            確認更改
           </Button>
         </form>
       )}

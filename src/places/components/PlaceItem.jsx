@@ -44,7 +44,7 @@ const PlaceItem = (props) => {
         header={props.address}
         contentClass="place-item__modal-content"
         footerClass="place-item__modal-actions"
-        footer={<Button onClick={closeMapHandler}>CLOSE</Button>}
+        footer={<Button onClick={closeMapHandler}>關閉</Button>}
       >
         <div className="map-container">
           <Map center={props.coordinates} zoom={16} />
@@ -53,23 +53,20 @@ const PlaceItem = (props) => {
       <Modal
         show={showConfirmModal}
         onCancel={cancelDeleteHandler}
-        header="Are you sure?"
+        header="確定要刪除嗎？"
         footerClass="place-item__modal-actions"
         footer={
           <>
             <Button inverse onClick={cancelDeleteHandler}>
-              CANCEL
+              取消
             </Button>
             <Button danger onClick={confirmDeleteHandler}>
-              DELETE
+              刪除
             </Button>
           </>
         }
       >
-        <p>
-          Do you want to proceed and delete this place? Please note that it
-          can't be undone thereafter.
-        </p>
+        <p>確定要刪除這個地點資料嗎？刪除後就無法回復囉！</p>
       </Modal>
       <li className="place-item">
         <Card
@@ -87,13 +84,13 @@ const PlaceItem = (props) => {
           </div>
           <div className="place-item__actions">
             <Button inverse onClick={openMapHandler}>
-              VIEW ON MAP
+              在地圖上查看
             </Button>
             {props.creatorId === auth.userId && (
               <>
-                <Button to={`/places/${props.id}`}>EDIT</Button>
+                <Button to={`/places/${props.id}`}>編輯</Button>
                 <Button danger onClick={showDeleteWarningHandler}>
-                  DELETE
+                  刪除
                 </Button>
               </>
             )}
